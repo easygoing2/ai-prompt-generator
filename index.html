@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://k-oi.pro/tool/ai_prompt_generator.html -->
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AI 프롬프트 생성기 - 맞춤형 개발 지침</title>
+	<meta name="description" content="AI 프롬프트 생성기를 사용하여 Laravel, React, PHP 등 다양한 개발 환경에 맞는 전문적인 AI 지침을 자동으로 생성하세요.">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+
+</head>
+
+<body>
+	<div class="container">
+		<!-- 히어로 섹션 -->
+		<div class="hero-section">
+			<span class="hero-emoji">🚀</span>
+			<h1 class="hero-title">AI 프롬프트 생성기</h1>
+			<p class="hero-subtitle">
+				프로젝트에 특화된 전문적인 AI 개발 지침을 자동으로 생성하세요.<br>
+				Laravel, React부터 순수 PHP까지 모든 환경을 지원합니다.
+			</p>
+		</div>
+
+		<!-- 메인 폼 -->
+		<div class="form-wrapper">
+			<form id="promptForm">
+				<!-- 1단계: 언어 선택 -->
+				<div class="step-section visible">
+					<div class="step-header">
+						<div class="step-number">1</div>
+						<h2 class="step-title">주요 개발 언어 선택</h2>
+					</div>
+
+					<div class="selection-grid">
+						<div class="selection-card" data-radio="language" data-value="php">
+							<input type="radio" id="lang-php" name="language" value="php">
+							<div class="card-icon">🐘</div>
+							<h3 class="card-title">PHP</h3>
+							<p class="card-description">
+								서버사이드 웹 개발의 강력한 언어로 다양한 프레임워크와 CMS를 완벽 지원합니다.
+							</p>
+						</div>
+
+						<div class="selection-card" data-radio="language" data-value="react">
+							<input type="radio" id="lang-react" name="language" value="react">
+							<div class="card-icon">⚛️</div>
+							<h3 class="card-title">React + TypeScript</h3>
+							<p class="card-description">
+								최신 프론트엔드 개발을 위한 React와 TypeScript의 완벽한 조합입니다.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 2단계: PHP 세부 선택 -->
+				<div class="step-section hidden" id="phpDetails">
+					<div class="step-header">
+						<div class="step-number">2</div>
+						<h2 class="step-title">PHP 개발 환경 선택</h2>
+					</div>
+
+					<div class="selection-grid">
+						<div class="selection-card" data-radio="phpType" data-value="plain">
+							<input type="radio" id="php-plain" name="phpType" value="plain">
+							<div class="card-icon">📄</div>
+							<h3 class="card-title">순수 PHP</h3>
+							<p class="card-description">
+								컴포저 없이 순수 PHP로 개발하는 전통적인 평면구조 프로젝트
+							</p>
+						</div>
+
+						<div class="selection-card" data-radio="phpType" data-value="cms">
+							<input type="radio" id="php-cms" name="phpType" value="cms">
+							<div class="card-icon">🏗️</div>
+							<h3 class="card-title">CMS 기반</h3>
+							<p class="card-description">
+								그누보드5, 워드프레스 등 기존 CMS의 함수기반 구조에서 작업
+							</p>
+						</div>
+
+						<div class="selection-card" data-radio="phpType" data-value="laravel">
+							<input type="radio" id="php-laravel" name="phpType" value="laravel">
+							<div class="card-icon">🎯</div>
+							<h3 class="card-title">Laravel</h3>
+							<p class="card-description">
+								Laravel 프레임워크 기반의 현대적인 PHP 웹 애플리케이션 개발
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 2단계: React 세부 선택 -->
+				<div class="step-section hidden" id="reactDetails">
+					<div class="step-header">
+						<div class="step-number">2</div>
+						<h2 class="step-title">React 개발 환경 선택</h2>
+					</div>
+
+					<div class="selection-grid">
+						<div class="selection-card" data-radio="reactType" data-value="cra">
+							<input type="radio" id="react-cra" name="reactType" value="cra">
+							<div class="card-icon">⚡</div>
+							<h3 class="card-title">Create React App</h3>
+							<p class="card-description">
+								표준 React 개발 환경으로 SPA 애플리케이션을 빠르게 구축
+							</p>
+						</div>
+
+						<div class="selection-card" data-radio="reactType" data-value="nextjs">
+							<input type="radio" id="react-nextjs" name="reactType" value="nextjs">
+							<div class="card-icon">🔥</div>
+							<h3 class="card-title">Next.js</h3>
+							<p class="card-description">
+								풀스택 React 프레임워크로 SSR, SSG, API Routes까지 완벽 지원
+							</p>
+						</div>
+
+						<div class="selection-card" data-radio="reactType" data-value="vite">
+							<input type="radio" id="react-vite" name="reactType" value="vite">
+							<div class="card-icon">⚡</div>
+							<h3 class="card-title">Vite React</h3>
+							<p class="card-description">
+								번개처럼 빠른 개발 서버와 최적화된 번들링을 제공하는 차세대 툴체인
+							</p>
+						</div>
+
+						<div class="selection-card" data-radio="reactType" data-value="native">
+							<input type="radio" id="react-native" name="reactType" value="native">
+							<div class="card-icon">📱</div>
+							<h3 class="card-title">React Native</h3>
+							<p class="card-description">
+								iOS와 Android를 동시에 지원하는 크로스플랫폼 모바일 앱 개발
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 3단계: 기본 정보 -->
+				<div class="step-section visible">
+					<div class="step-header">
+						<div class="step-number">3</div>
+						<h2 class="step-title">프로젝트 기본 정보</h2>
+					</div>
+
+					<div class="form-grid">
+						<div class="input-group">
+							<label class="input-label" for="projectName">프로젝트명</label>
+							<input type="text" id="projectName" class="input-field" placeholder="예: 스마트 재고관리 시스템">
+						</div>
+
+						<div class="input-group">
+							<label class="input-label" for="projectType">프로젝트 유형</label>
+							<select id="projectType" class="input-field">
+								<option value="">선택하세요</option>
+								<option value="erp">ERP 시스템</option>
+								<option value="crm">CRM 시스템</option>
+								<option value="cms">콘텐츠 관리 시스템</option>
+								<option value="ecommerce">이커머스 플랫폼</option>
+								<option value="blog">블로그/포털</option>
+								<option value="dashboard">대시보드/관리자</option>
+								<option value="api">API 서버</option>
+								<option value="mobile">모바일 앱</option>
+								<option value="custom">기타 맞춤형</option>
+							</select>
+						</div>
+
+						<div class="input-group">
+							<label class="input-label" for="businessDomain">비즈니스 도메인</label>
+							<input type="text" id="businessDomain" class="input-field" placeholder="예: 제조업, 유통업, 교육, 의료, 금융 등">
+						</div>
+					</div>
+				</div>
+
+				<!-- 4단계: 기술 스택 -->
+				<div class="step-section">
+					<div class="step-header">
+						<div class="step-number">4</div>
+						<h2 class="step-title">기술 스택 및 도구</h2>
+					</div>
+
+					<div class="input-group" style="margin-bottom: 32px;">
+						<label class="input-label">데이터베이스</label>
+						<div class="checkbox-grid">
+							<div class="checkbox-item">
+								<input type="checkbox" id="mysql" name="database" value="MySQL">
+								<label class="checkbox-label" for="mysql">MySQL</label>
+							</div>
+							<div class="checkbox-item">
+								<input type="checkbox" id="postgresql" name="database" value="PostgreSQL">
+								<label class="checkbox-label" for="postgresql">PostgreSQL</label>
+							</div>
+							<div class="checkbox-item">
+								<input type="checkbox" id="mongodb" name="database" value="MongoDB">
+								<label class="checkbox-label" for="mongodb">MongoDB</label>
+							</div>
+							<div class="checkbox-item">
+								<input type="checkbox" id="redis" name="database" value="Redis">
+								<label class="checkbox-label" for="redis">Redis</label>
+							</div>
+							<div class="checkbox-item">
+								<input type="checkbox" id="sqlite" name="database" value="SQLite">
+								<label class="checkbox-label" for="sqlite">SQLite</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="input-group">
+						<label class="input-label" for="additionalTools">추가 도구/라이브러리</label>
+						<textarea id="additionalTools" class="input-field textarea"
+							placeholder="예: Filament, Tailwind CSS, Material-UI, Axios, Docker, Jest 등"></textarea>
+					</div>
+				</div>
+
+				<!-- 5단계: 작업 범위 -->
+				<div class="step-section">
+					<div class="step-header">
+						<div class="step-number">5</div>
+						<h2 class="step-title">주요 작업 범위</h2>
+					</div>
+
+					<div class="checkbox-grid">
+						<div class="checkbox-item">
+							<input type="checkbox" id="auth" name="workScope" value="인증/권한 관리">
+							<label class="checkbox-label" for="auth">인증/권한 관리</label>
+						</div>
+						<div class="checkbox-item">
+							<input type="checkbox" id="crud" name="workScope" value="CRUD 기능 구현">
+							<label class="checkbox-label" for="crud">CRUD 기능 구현</label>
+						</div>
+						<div class="checkbox-item">
+							<input type="checkbox" id="api" name="workScope" value="RESTful API 개발">
+							<label class="checkbox-label" for="api">RESTful API 개발</label>
+						</div>
+						<div class="checkbox-item">
+							<input type="checkbox" id="ui" name="workScope" value="UI/UX 구현">
+							<label class="checkbox-label" for="ui">UI/UX 구현</label>
+						</div>
+						<div class="checkbox-item">
+							<input type="checkbox" id="report" name="workScope" value="보고서/대시보드">
+							<label class="checkbox-label" for="report">보고서/대시보드</label>
+						</div>
+						<div class="checkbox-item">
+							<input type="checkbox" id="integration" name="workScope" value="외부 시스템 연동">
+							<label class="checkbox-label" for="integration">외부 시스템 연동</label>
+						</div>
+						<div class="checkbox-item">
+							<input type="checkbox" id="testing" name="workScope" value="테스트 자동화">
+							<label class="checkbox-label" for="testing">테스트 자동화</label>
+						</div>
+						<div class="checkbox-item">
+							<input type="checkbox" id="optimization" name="workScope" value="성능 최적화">
+							<label class="checkbox-label" for="optimization">성능 최적화</label>
+						</div>
+					</div>
+				</div>
+
+				<!-- 6단계: 성능 및 보안 -->
+				<div class="step-section">
+					<div class="step-header">
+						<div class="step-number">6</div>
+						<h2 class="step-title">성능 및 보안 요구사항</h2>
+					</div>
+
+					<div class="form-grid">
+						<div class="input-group">
+							<label class="input-label" for="performance">성능 요구사항</label>
+							<input type="text" id="performance" class="input-field"
+								placeholder="예: 동시 사용자 500명, 응답시간 1초 이내, 99.9% 가용성">
+						</div>
+
+						<div class="input-group">
+							<label class="input-label" for="security">보안 요구사항</label>
+							<textarea id="security" class="input-field textarea"
+								placeholder="예: SSL/TLS 암호화, 데이터베이스 암호화, GDPR 준수, 2FA 인증, API 보안 등"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<button type="button" class="generate-button" id="generateBtn" disabled="" style="opacity: 0.6;">
+					<span>🎯 전문 AI 지침 생성하기</span>
+				</button>
+			</form>
+
+			<!-- 미리보기 섹션 -->
+			<div id="previewSection" class="preview-section hidden">
+				<div class="preview-header">
+					<h3 class="preview-title">
+						<span>✨</span>
+						생성된 AI 지침 미리보기
+					</h3>
+					<button type="button" class="download-button" id="downloadBtn">
+						<span>💾</span>
+						TXT 다운로드
+					</button>
+				</div>
+
+				<div class="preview-content">
+					<div id="previewText" class="preview-text"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="./script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+
+</html>
